@@ -1,0 +1,39 @@
+				 @@@@@@ ORE DE IMPLEMENTARE @@@@@@
+
+	Am implementat jocul in aproximativ 80h, insa mult din timp mi-a fost ocupat
+de testarea lui efectiva. Am facut multe afisari grafice, am testat mult pentru
+a verifica si intelege modul de functionare Ncurses. 
+
+					@@@@@@ IMPLEMENTARE @@@@@@
+
+	Initial, am incercat sa implementez printarea unui box, a unei cutii pe 
+mijlocul ecranului cu niste caractere. Am adaugat apoi niste stringuri,
+indreptandu-ma spre realizarea meniului. Am creat stringurile necesare meniului 
+si optiunile acestuia: New Game, Resume Game, Quit si am implementat o optiune 
+in plus, optiunea de Info prin care am atasat niste informatii istorice si etice
+legate de jocul Battleship, niste modificari ce le-a suferit de-a lungul timpului.
+Am creat posibilitatea de a naviga prin meniu si am adaugat si un Logo si pe
+pagina principala a meniului. M-am folosit mult de atributele existente in 
+biblioteca ncurses, de ex: bold, blink, culori destul de multe pe ecran. 
+	Am citit fiecare fisier din cele introduse ca argument, si am creat o rando-
+mizare ce are loc de fiecare data pentru numarul hartii, generand harti diferite
+la inceputul jocului.
+	Am creat apoi doua griduri formate din caractere pe pagina principala a 
+jocului, dupa care am citit din fiecare fisier configuratia acestuia, adaugand-o
+ulterior pe gridul personal, cel din dreapta. Pentru configuratia gridului
+calculatorului, am generat doua numere random pentru fiecare pozitie de pe o 
+matrice creata. Am generat in acelasi timp un alt numar, necesar pentru o 
+directie random: sus, jos, stanga, dreapta, pentru a randomiza si directia pt
+crearea tipului de nava. Am pornit cu crearea navei de 4 patrate, descrescator,
+pana la cea de 1 patrat. La fiecare creare a unei nave, am bordat-o, 
+inconjurand-o cu caractere de 0, necesare pentru a cunoaste distanta de 1 patrat
+care este impusa pentru urmatoarea nava. Am testat de fiecare data daca in 
+coordonata respectiva nu se afla vreun caracter, pentru evitarea suprapunerii
+navelor. 
+	Am implementat si verificat la fiecare lovitura pozitiva, o afisare a 
+patratului in culoarea verde, iar in caz contrar in rosu. Am implementat cu 
+succes si optiunea de Destroy in Advance si am adaugat o optiune de Auto-Play,
+ce face ca userii cei doi sa poata juca automat. Am afisat loviturile reusite
+pe care fiecare player le are asupra oponentului, de fiecare data cand acestea
+au loc. La finalul jocului, va fi afisat castigatorul si la introducerea unei
+taste, va aparea meniul principal cu optiunea inceperii unui nou joc.
